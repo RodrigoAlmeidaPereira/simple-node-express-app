@@ -7,7 +7,7 @@ const port = 3000
 app.use(express.json());
 
 // mongoose
-mongoose.connect('mongodb://127.0.0.1:27017/blog', { useNewUrlParser: true });
+mongoose.connect('mongodb://root:example@localhost:27017/blog?authSource=admin', { useNewUrlParser: true });
 var db = mongoose.connection;
 var blogSchema = new mongoose.Schema({
     name: String
